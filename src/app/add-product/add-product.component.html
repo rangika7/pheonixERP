@@ -1,0 +1,225 @@
+
+<div class="upmenu">
+
+  <div class="row">
+    <div class="col-sm-6">
+      <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li class="active">Add product</li>
+      </ol>
+    </div>
+    <div class="col-sm-6">
+            
+  
+            
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-sm-6">
+          <button type="button" class="btn btn-primary">Create</button>
+          <button type="button" class="btn btn-primary">Edit</button>
+      </div>
+      <div class="col-sm-6">
+      </div>
+  </div>
+
+</div>
+
+
+<br/>
+
+
+<div class="content" >
+    <form (submit)="addItem($event)"> 
+    <div class="panel panel-default">
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="./app/images/cart.png" style="width:100px; height:100px;"/>
+                </div>
+                <div class="col-sm-8">
+                    <h2>
+                        <md-input-container>
+                            <input md-input placeholder="Product Name" [(ngModel)]="productname" name="productname">
+                        </md-input-container>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home">General Information</a></li>
+                        <li><a data-toggle="tab" href="#menu1">Inventry</a></li>
+                        <li><a data-toggle="tab" href="#menu2">Sales</a></li>
+                        <li><a data-toggle="tab" href="#menu3">Account</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <div class="col-sm-6">
+                            <table>
+                                <tr>
+                                    <td><b>Product Type</b></td>
+                                    <td style="padding:15px 15px 15px 15px;">
+                                        <select class="form-control" [(ngModel)]="producttype" name="producttype">
+                                            <option>Add New Product</option>
+                                            <option>Mobile Phone</option>
+                                            <option>Laptops</option>
+                                            <option>Tabs</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>Internal Referance</b></td>
+                                    <td style="padding:15px 15px 15px 15px;"><input type="text" class="form-control" [(ngModel)]="internalreferance" name="internalreferance"></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Barcode</b></td>
+                                    <td style="padding:15px 15px 15px 15px;"><input type="text" class="form-control" [(ngModel)]="barcode" name="barcode"></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Inventory Policy</b></td>
+                                    <td style="padding:15px 15px 15px 15px;">
+                                        <select class="form-control" [(ngModel)]="inventorypolicy" name="inventorypolicy">
+                                            <option>Delevery</option>
+                                            <option>On shop</option>
+                                            <option>E-Shopping</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-sm-6">
+                            <table>
+                                <tr>
+                                    <td><b>Selling Price</b></td>
+                                    <td style="padding:15px 15px 15px 15px;">
+                                        <md-input-container>
+                                            <input md-input placeholder="Rs." [(ngModel)]="sellingprice" name="sellingprice">
+                                        </md-input-container>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>Cost</b></td>
+                                    <td style="padding:15px 15px 15px 15px;">
+                                        <md-input-container>
+                                            <input md-input placeholder="Rs." [(ngModel)]="cost" name="cost">
+                                        </md-input-container>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <div class="col-sm-6">
+                            <table>
+                                <tr>
+                                    <td><b>Available Quentity</b></td>
+                                    <td style="padding:15px 15px 15px 15px;"><input type="text" class="form-control"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-sm-6">
+                            <table>
+                                <tr>
+                                    <td><b>Reorder Level</b></td>
+                                    <td style="padding:15px 15px 15px 15px;"><input type="text" class="form-control" [(ngModel)]="reorderlevel" name="reorderlevel"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-sm-12">
+                            <h3>Locations</h3>
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Store Id</th>
+                                    <th>Location</th>
+                                    <th>Maximum Quentity</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>75A55as</td>
+                                    <td>Colombo</td>
+                                    <td>750</td>
+                                </tr>
+                                <tr>
+                                    <td>75A55as</td>
+                                    <td>Colombo</td>
+                                    <td>750</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-sm-12">
+                            <h3>Vendors</h3>
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Vender ID</th>
+                                    <th>Vender Name</th>
+                                    <th>Outstanding Amount</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>25</td>
+                                    <td>Jhone Keels</td>
+                                    <td>Rs : 25000</td>
+                                </tr>
+                                <tr>
+                                    <td>25</td>
+                                    <td>Jhone Keels</td>
+                                    <td>Rs : 25000</td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <div class="col-sm-6">
+                            <h3>Sales Condition</h3>
+                            <table>
+                                <tr>
+                                    <td><b>Warrenty</b></td>
+                                    <td style="padding:15px 15px 15px 15px;"><input type="text" class="form-control" [(ngModel)]="warrenty" name="warrenty"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="menu3" class="tab-pane fade">
+                        <div class="col-sm-6">
+                            <table>
+                                <tr>
+                                    <td><b>Value Added Tax (VAT) %</b></td>
+                                    <td style="padding:15px 15px 15px 15px;"><input type="text" class="form-control" [(ngModel)]="vat" name="vat"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<div class="row">
+      <div class="col-sm-6">
+          <input type="submit" class="btn btn-primary" value="Save">
+          <button type="button" class="btn btn-primary">clear</button>
+      </div>
+      <div class="col-sm-6">
+      </div>
+  </div>
+
+
+    </form>
+
+</div>
+

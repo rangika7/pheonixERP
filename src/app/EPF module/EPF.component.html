@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container">
+<md-card style="text-align:center">EPF & ETF  calculation</md-card><br/>
+<md-card style="background-color:#94D6CE; height:100%">
+	<div class="col-sm-12">
+		<input type="date">
+	</div>
+
+	<md-card style="height:100px; backgroud-color:#4169E1;">
+		<div class="col-sm-4">
+			<div class="col-md-1"><md-checkbox (click)="viewetf()"></md-checkbox></div>
+			<div class="col-md-7">ETF calculation</div><br/>
+			<div class="col-sm-12" >
+				<div class="col-sm-5"><md-input type="text"  placeholder="Employer  %" *ngIf="view" ></md-input></div>
+				<div class="col-sm-1"></div>
+				<div class="col-sm-5"><md-input type="text"  placeholder="Employee  %" *ngIf="view" ></md-input></div>
+			</div>
+		</div>
+
+		<div class="col-sm-4">
+			<div class="col-md-1"><md-checkbox (click)="viewepf()"></md-checkbox></div>
+			<div class="col-md-7">EPF calculation</div>
+			<div class="col-sm-12" >
+				<div class="col-sm-5"><md-input type="text"  placeholder="Employer  %" *ngIf="show"></md-input></div>
+			</div>
+			
+		</div>
+
+		<div class="col-sm-4">
+			<button class="pull-left" md-raised-button md-tooltip="Calculate EPF/ETF">Calculate</button>
+		</div>
+
+
+	</md-card>
+<br/><br/>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Basic salary(Rs)</th>
+		<th>ETF</th>
+		<th>EPF</th>
+      </tr>
+    </thead>
+    <tbody>
+     
+      <tr class="success">
+        <td>01</td>
+        <td>aaaa</td>
+        <td>20000</td>
+		<td></td>
+		<td>12%</td>
+      </tr>
+      <tr class="danger">
+        <td>Danger</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+		<td>Active</td>
+		<td>Active</td>
+      </tr>
+      <tr class="info">
+        <td>Info</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+		<td>Active</td>
+		<td>Active</td>
+      </tr>
+      <tr class="warning">
+        <td>Warning</td>
+        <td>Refs</td>
+        <td>bo@example.com</td>
+		<td>Active</td>
+		<td>Active</td>
+      </tr>
+      <tr class="active">
+        <td>Active</td>
+        <td>Activeson</td>
+        <td>act@example.com</td>
+		<td>Active</td>
+		<td>Active</td>
+      </tr>
+	   <tr class="success">
+        <td>Success</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+  <br/><br/>
+
+   <div class="col-sm-12">
+        <button  class="pull-right" md-raised-button md-tooltip="Register new person!" routerLink="/RegForm">Save</button>
+	</div>
+
+
+</md-card>
+</div>

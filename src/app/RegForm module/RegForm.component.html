@@ -1,0 +1,274 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container">
+<md-card style="text-align:center"><h2>Registration Form !</h2></md-card><br/>
+
+<md-card style="background-color:#94D6CE">
+    <div class="row">
+        <div class="col-sm-6">
+           	<div class="form-group">
+							<label for="name"  class="cols-sm-2 control-label">First Name</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<input type="text" [(ngModel)]="firstName" class="form-control" name="name" id="name"  placeholder="Your First Name"/>
+								</div>
+							</div>
+						</div>
+
+                         	<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Last Name</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<input type="text" [(ngModel)]="lastName" class="form-control" name="name" id="name"  placeholder="Your Last Name"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label"> Name With Initial</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<input type="text" [(ngModel)]="obj.lastName" class="form-control" name="name" id="name"  placeholder="Your Name with initials"/>
+								</div>
+							</div>
+						</div>
+
+
+                         	<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">NIC Number</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<input type="text" [(ngModel)]="nic" class="form-control" name="name" id="name"  placeholder=""/>
+								</div>
+							</div>
+						</div>
+
+                         	<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Employee ID</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<input type="text" [(ngModel)]="empId" class="form-control" name="name" id="name"  placeholder=""/>
+								</div>
+							</div>
+						</div>
+
+						 <div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+									<input type="text" [(ngModel)]="email" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+								</div>
+							</div>
+						</div>
+                    
+                   
+        </div>
+         <div class="col-sm-6">
+<img src="https://cdn1.iconfinder.com/data/icons/rcons-user-action/512/users_woman-512.png" class="img-responsive" alt="Cinque Terre" width="304" height="236"> 
+      <br/>
+	    <form>
+    <span id="fileselector">
+        <label class="btn btn-default" for="upload-file-selector">
+            <input id="upload-file-selector" type="file">
+            <i class="fa_icon icon-upload-alt margin-correction"></i>upload file
+        </label>
+    </span>
+</form>
+		 </div>
+        <div class="col-sm-12">
+
+            <div class="form-group">
+							<label>Address</label>
+							<textarea placeholder="Enter Address Here.." [(ngModel)]="obj.address" rows="3" class="form-control"></textarea>
+			</div>
+
+        <div class="col-sm-6">
+			<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Phone Number</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+									<input type="text" [(ngModel)]="obj.tp1" class="form-control" name="email" id="email"  placeholder="Enter your Phone Number"/>
+								</div>
+							</div>
+						</div>
+               
+
+<br/><br/>
+                 <div class="form-group">
+                        <label class="col-md-4 control-label">Gender : </label>
+                        <div class="col-md-4">
+                            <div class="radio">
+							
+                                <label>
+                                    <input type="radio" name="hosting" value="yes" ngModel> Male
+                                </label>
+								
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="no" ngModel> Female
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+<br/>
+
+
+
+<br/>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Mobile</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+									<input type="text" [(ngModel)]="obj.tp2"class="form-control" name="email" id="email"  placeholder="Enter your Phone Number"/>
+								</div>
+							</div>
+						</div>
+
+<br/><br/>
+<label>Date of Birth</label>
+	
+
+<input type="date">
+
+
+
+
+        </div>
+        </div>
+
+        <div class="col-sm-12">
+        <md-card (click)="viewtask()" style="background-color:#089494 ; height:65px">
+            <h2>Select Task</h2>       
+        </md-card>
+
+		<md-card style="background-color:99FFCC" *ngIf="view">
+			
+<!-- tab group for select task -->
+			<md-tab-group>
+				<md-tab label="Login Module">
+						<div class="col-sm-6"><br/>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+
+								<div >
+									<br/><br/>
+								<button  class="pull-right" style="color:#000000; background-color:#999999" md-raised-button md-tooltip="Save Task!" routerLink="/RegForm">Save</button>
+								</div>						
+						</div>
+						<div class="col-sm-6"><br/>
+							
+								<md-checkbox></md-checkbox><br/>
+								<md-checkbox></md-checkbox><br/>
+								<md-checkbox></md-checkbox><br/>
+								<md-checkbox></md-checkbox>
+								
+						</div>
+				</md-tab>
+
+				<md-tab label="Leave Management">
+					<div class="col-sm-6"><br/>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<br/><br/>
+							<button  class="pull-right" style="color:#009999; background-color:#999999" md-raised-button md-tooltip="Register new person!" routerLink="/RegForm">Save</button>					
+						</div>
+						<div class="col-sm-6"><br/>
+							
+								<md-checkbox></md-checkbox><br/>
+								<md-checkbox></md-checkbox><br/>
+								<md-checkbox></md-checkbox><br/>
+								<md-checkbox></md-checkbox>
+								
+								
+						</div>
+				</md-tab>
+				<md-tab label="Salary calculate">
+					<div class="col-sm-6"><br/>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<br/><br/>
+							<button  class="pull-right" style="color:#009999; background-color:#999999" md-raised-button md-tooltip="Register new person!" routerLink="/RegForm">Save</button>						
+						</div>
+						<div class="col-sm-6"><br/>
+							
+								<md-checkbox></md-checkbox><br/>
+								<md-checkbox></md-checkbox><br/>
+								<md-checkbox></md-checkbox><br/>
+								<md-checkbox></md-checkbox>
+								
+						</div>
+				</md-tab>
+				<md-tab label="Purchasing">
+					<div class="col-sm-6"><br/>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<br/><br/>
+							<button  class="pull-right" style="color:#009999; background-color:#999999" md-raised-button md-tooltip="Register new person!" routerLink="/RegForm">Save</button>							
+						</div>
+						<div class="col-sm-6"><br/>
+							
+								<md-checkbox></md-checkbox><br/>
+								<md-checkbox></md-checkbox><br/>
+								<md-checkbox></md-checkbox><br/>
+								<md-checkbox></md-checkbox>
+							
+						</div>
+				</md-tab>
+				<md-tab label="Sales">
+					<div class="col-sm-6"><br/>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<li>hsdhsghjghgfjgfjhghgdfhd,ghfdh</li>
+							<br/><br/>
+							<button  class="pull-right" style="color:#009999; background-color:#999999" md-raised-button md-tooltip="Register new person!" routerLink="/RegForm">Save</button>							
+						</div>
+						<div class="col-sm-6"><br/>
+							
+								<md-checkbox></md-checkbox><br/>
+								<md-checkbox></md-checkbox><br/>
+								<md-checkbox></md-checkbox><br/>
+								<md-checkbox></md-checkbox>
+								
+						</div>
+				</md-tab>
+				
+			</md-tab-group>
+
+		</md-card>
+		<br/>
+		<div class="col-sm-6"></div>
+		 <div class="col-sm-2">
+		 </div>
+			  <div class="col-sm-2">
+                <button  (click)="save()"class="pull-left" md-raised-button md-tooltip="Register new person!" routerLink="/RegForm">Save</button>
+			  </div>
+			  <div class="col-sm-2">
+				<button  class="pull-left" md-raised-button md-tooltip="Register new person!" routerLink="/RegForm">Cancel</button>
+           </div>
+    </div>  
+    </div> 
+     
+ </md-card>
+</div>

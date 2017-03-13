@@ -1,0 +1,53 @@
+    
+
+    <div class="container">
+    <md-card style="background-color:#ADD8E6">
+    <md-card>
+        
+       <div class="row">
+           <h1 style="text-align:center">Employee Register</h1>
+           <p></p>
+           <div class="col-sm-6">
+                <button  class="pull-left" md-raised-button md-tooltip="Register new person!" routerLink="/RegForm">New</button>
+           </div>
+             
+             <div class="col-sm-6">
+               <div>
+                  
+                    <form action="sphider/search.php" method="get" class="pull-right">
+                    <label >NIC NO:</label>
+                    <input type="text" name="query" id="query" size="40" value="">
+                    <input type="submit" value="Search">
+                    <input type="hidden" name="search" value="1">
+                    </form>
+                    </div>
+
+             </div>
+       </div>
+
+     
+    </md-card>
+    <br/>
+       	
+     
+       	
+			<div *ngFor="let h of obj" class="media " class="border">
+                                                 
+				<a href="#" class="pull-left">
+					<img style="height:35px; width:55px;" src="" class="media-photo" >
+                        <span style="height:35px; width:55px;"></span>
+				        </a>
+				            <div class="media-body">
+                            <button class="pull-right" md-raised-button md-tooltip="Edit information!" routerLink="/RegForm">EDIT</button>
+					        <a href="#" data-toggle="popover"  title="{{h.emp_name}} {{h.email}}">
+                        <p class="summary">  {{h.emp_name}} {{h.email}}</p>
+                        
+					</a>
+				</div>
+			</div>
+									               				
+    </md-card>
+           
+            
+
+    </div>
